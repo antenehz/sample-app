@@ -1,0 +1,31 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My App</title>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <style>
+        body {
+            display: flex; /* Use flexbox for centering */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100vh; /* Full viewport height */
+            margin: 0; 
+            background-color: lightblue;
+        }
+
+        #spin-text {
+            font-size: 2em;
+            display: inline-block; /* Needed for transform to work */
+            transition: transform 0.1s; /* Smooth rotation */
+            transform-origin: center; /* Set the pivot point to the center */
+        }
+    </style>
+</head>
+<body>
+    <h1 id="spin-text">Hello User!</h1>
+    <p><br>Welcome to my app!</p>
+</body>
+</html>
